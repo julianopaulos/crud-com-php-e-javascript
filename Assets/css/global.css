@@ -1,0 +1,138 @@
+/*FAZENDO CONFIGURAÇÕES BÁSICAS*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html, body {
+	line-height: 1;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    background-color: rgba(240, 240, 255, .9);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/*COMEÇANDO AQUI*/
+
+header{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+header ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header ul li{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+header ul li:hover{
+    color:rgba(20, 20, 25, .3);
+}
+header ul .pipe{
+    content: '';
+    width: 2px;
+    height: 25px;
+    background-color: black;
+}
+
+.container, .view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.container select{
+    border:1px solid rgba(20, 20, 25, .3);
+    border-radius: 4px;
+    height: 30px;
+    padding: 5px 10px;
+    min-width: 100%;
+}
+
+
+.container .cliente_cadastro{
+    color: blue;
+}
+
+.container .form_pessoa, .container .form_conta, .container .form_movimentacao{
+    display: flex;
+    align-items: initial;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .form_pessoa label, .container .form_conta label, .container .form_movimentacao label{
+    line-height: 30px;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.container .form_pessoa input, .container .form_conta input, .container .form_movimentacao input{
+    border: 1px solid rgba(20, 20, 25, .3);
+    border-radius: 4px;
+    padding: 5px 10px;
+    height: 20px;
+    min-width: 200px;
+}
+
+.container .form_pessoa button, .container .form_conta button, .container .form_movimentacao button{
+    margin: 15px auto;
+    width: 100px;
+    border: 0;
+    border-radius: 4px;
+    padding: 10px 30px;
+    background-color:rgba(100, 100, 190, 1);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.container .form_pessoa button:hover, .container .form_conta button:hover, .container .form_movimentacao button:hover{
+    background-color:rgba(140, 140, 190, .6);
+}
+
+.view{
+    margin-bottom: 100px;
+    flex-direction: column;
+}
+.view h1, .view h2, .view h3, .view h4, .view h5 {
+    margin: 20px auto;
+}
+.view .table_pessoa, .view .table_conta, .view .table_movimentacao{
+    border-radius: 3px;
+    border: 1px solid rgba(50, 50, 55, .3);
+}
+.view .table_pessoa thead, .view .table_conta thead, .view .table_movimentacao thead{
+    font-size:1.2em;
+    font-weight: bold;
+}
+.view .table_pessoa td, .view .table_conta td, .view .table_movimentacao td{
+    font-size: 1em;
+    padding: 10px;
+    text-align: center;
+}
+.view .table_movimentacao .red_line{
+    background-color: rgba(200, 100, 100, .3);
+    color: rgba(200, 50, 50, 1);
+}
